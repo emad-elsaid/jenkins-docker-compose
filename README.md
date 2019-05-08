@@ -26,7 +26,7 @@ use the slave to execute your jobs.
 
 ## Note
 
-if you turned of the containers all data related to the master will be save in a
-docker volume, slave will be reset, that's useful if something went south on the
+if you turned off the containers all data related to the master will be saved in a
+docker volume, slave will be resetted, that's useful if things went south on the
 slave and you want to reset it, execute `docker-compose down` then run the
 cotainers again.
