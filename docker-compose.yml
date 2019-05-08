@@ -1,0 +1,18 @@
+version: '3'
+services:
+  master:
+    build: .
+    ports:
+      - "50000:50000"
+      - "8080:8080"
+    depends_on:
+      - slave
+    volumes:
+      - jenkins_home:/var/jenkins_home
+  slave:
+    build: slave
+    expose:
+      - "22"
+
+volumes:
+  jenkins_home:
