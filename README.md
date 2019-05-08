@@ -14,6 +14,15 @@ jenkins slave contains secured in a docker-compose network
 1. the password jenkins asks for should appear in your terminal while the
    container is starting
 
+## Adding the slave node
+
+Go to `http://localhost:8080/computer/` add "new node", the slave username and
+password are `jenkins`, use ssh to connect with these credentials, and choose
+not to verify the Host key, the ssh host is simply `slave`.
+
+Also go to the master slave `http://localhost:8080/computer/(master)/configure`
+and choose usage "only build jobs with label expressions matching this node" to
+use the slave to execute your jobs.
 
 ## Note
 
